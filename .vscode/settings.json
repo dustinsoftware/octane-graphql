@@ -1,0 +1,38 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "search.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/tmp": true,
+        "**/dist": true,
+        ".idea/*": true
+    },
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/.DS_Store": true,
+      ".idea": true,
+      "dist": true,
+      "node_modules": true,
+      "public/responsive": true,
+      "tmp": true
+    },
+    "files.watcherExclude": {
+      ".idea": true,
+      "**/.DS_Store": true,
+      "**/.git": true,
+      "**/.hg": true,
+      "**/.svn": true,
+      "**/node_modules/**": true,
+      "**/tmp": true,
+      "dist": true,
+      "node_modules": true,
+      "public": true
+    },
+    "files.trimTrailingWhitespace": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "javascript.validate.enable": true,
+    "typescript.tsdk": "./node_modules/typescript/lib"
+}
