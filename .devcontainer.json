@@ -1,0 +1,15 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+{
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "web",
+  "workspaceFolder": "/app",
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "emberjs.emberjs",
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "ms-vsliveshare.vsliveshare",
+    "streetsidesoftware.code-spell-checker"
+  ],
+  "postCreateCommand": "git config --global core.autocrlf true"
+}

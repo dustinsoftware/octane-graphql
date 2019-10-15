@@ -1,0 +1,7 @@
+{
+  "name": "octane-docker-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dustin Masters <dustin.masters@olo.com>",
+  "license": "MIT"
+}

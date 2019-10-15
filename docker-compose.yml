@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  web:
+    build: .
+    volumes:
+      - yarn:/home/user/.cache/yarn
+      - cache:/tmp
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "4200:4200"
+      - "7357:7357"
+
+volumes:
+  yarn:
+  cache:
