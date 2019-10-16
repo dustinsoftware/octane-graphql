@@ -15,7 +15,8 @@
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+    "audit": "lighthouse http://localhost:4200 --output-path=/app/public/lighthouse-results.html --chrome-flags=\"--headless --no-sandbox\""
   },
   "devDependencies": {
     "@ember/edition-utils": "^1.1.1",

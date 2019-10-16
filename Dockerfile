@@ -36,7 +36,9 @@ RUN groupadd -r user \
   && useradd --create-home -g user -G audio,video user \
   && chown -R user:user /app
 
-RUN npm i -g ember-cli@3.13.1
+RUN yarn global add ember-cli@3.13.1 lighthouse
+
+RUN PATH=$PATH:"$(yarn global bin)"
 
 RUN apt-get install -y vim
 
