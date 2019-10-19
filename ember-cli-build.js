@@ -8,7 +8,7 @@ module.exports = function(defaults) {
     },
     'esw-cache-fallback': {
       patterns: [
-        '/lighthouse-results.html'
+        '/lighthouse-results\\.html'
       ],
     }
   });
