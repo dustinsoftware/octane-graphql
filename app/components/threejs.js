@@ -3,6 +3,7 @@ import Component from '@ember/component';
 // From https://glitch.com/~three-js
 export default class ThreeJsComponent extends Component {
   didInsertElement() {
+    this.set('initialTime', performance.now());
     import('three').then(three => {
       this.initThreeJsScene(three);
       this.animate();
@@ -27,11 +28,11 @@ export default class ThreeJsComponent extends Component {
     this.mesh = new THREE.Mesh(geometry, material);
     this.scene.add(this.mesh);
 
-    this.threeRenderer = new THREE.WebGLRenderer({ antialias: true });
+    this.set('threeRenderer', new THREE.WebGLRenderer({ antialias: true }));
     this.threeRenderer.setSize(window.innerWidth, window.innerHeight);
 
     if (!this.isDestroying) {
-      this.element.appendChild(this.threeRenderer.domElement);
+      this.element.querySelector('.three-container').appendChild(this.threeRenderer.domElement);
     }
   }
 

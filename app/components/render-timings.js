@@ -4,7 +4,7 @@ import { set, computed } from '@ember/object';
 export default class RenderTimingsComponent extends Component {
   didInsertElement() {
     if ('performance' in window) {
-      set(this, 'timings', window.performance.getEntries());
+      set(this, 'timings', [ this.initialTime ? { timeToRender: performance.now() - this.initialTime } : undefined, ...window.performance.getEntries()].filter(Boolean));
     }
   }
 
