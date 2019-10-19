@@ -10,6 +10,9 @@ module.exports = function(defaults) {
       patterns: [
         '/lighthouse-results\\.html'
       ],
+    },
+    babel: {
+      plugins: [ require.resolve('ember-auto-import/babel-plugin') ]
     }
   });
 

@@ -1,11 +1,12 @@
 import Component from '@ember/component';
-import THREE from 'three';
 
 // From https://glitch.com/~three-js
 export default class ThreeJsComponent extends Component {
   didInsertElement() {
-    this.initThreeJsScene();
-    this.animate();
+    import('three').then(three => {
+      this.initThreeJsScene(three);
+      this.animate();
+    })
   }
 
   willDestroyElement() {
@@ -14,7 +15,7 @@ export default class ThreeJsComponent extends Component {
     }
   }
 
-  initThreeJsScene() {
+  initThreeJsScene(THREE) {
     this.camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 10);
     this.camera.position.z = 1;
 
