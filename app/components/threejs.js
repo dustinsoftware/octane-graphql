@@ -9,8 +9,8 @@ export default class ThreeJsComponent extends Component {
   }
 
   willDestroyElement() {
-    if (this.renderer) {
-      this.renderer.dispose();
+    if (this.threeRenderer) {
+      this.threeRenderer.dispose();
     }
   }
 
@@ -26,9 +26,9 @@ export default class ThreeJsComponent extends Component {
     this.mesh = new THREE.Mesh(geometry, material);
     this.scene.add(this.mesh);
 
-    this.renderer = new THREE.WebGLRenderer({ antialias: true });
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
-    document.querySelector('.three-js-container').appendChild(this.renderer.domElement);
+    this.threeRenderer = new THREE.WebGLRenderer({ antialias: true });
+    this.threeRenderer.setSize(window.innerWidth, window.innerHeight);
+    document.querySelector('.three-js-container').appendChild(this.threeRenderer.domElement);
   }
 
   animate = () => {
@@ -40,6 +40,6 @@ export default class ThreeJsComponent extends Component {
     this.mesh.rotation.x += 0.01;
     this.mesh.rotation.y += 0.02;
 
-    this.renderer.render(this.scene, this.camera);
+    this.threeRenderer.render(this.scene, this.camera);
   }
 }
