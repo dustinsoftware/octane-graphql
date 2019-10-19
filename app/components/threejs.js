@@ -29,7 +29,10 @@ export default class ThreeJsComponent extends Component {
 
     this.threeRenderer = new THREE.WebGLRenderer({ antialias: true });
     this.threeRenderer.setSize(window.innerWidth, window.innerHeight);
-    document.querySelector('.three-js-container').appendChild(this.threeRenderer.domElement);
+
+    if (!this.isDestroying) {
+      this.element.appendChild(this.threeRenderer.domElement);
+    }
   }
 
   animate = () => {

@@ -12,15 +12,6 @@ module('Integration | Component | application-error', function(hooks) {
 
     await render(hbs`<ApplicationError />`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <ApplicationError>
-        template block text
-      </ApplicationError>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.ok(this.element.textContent);
   });
 });

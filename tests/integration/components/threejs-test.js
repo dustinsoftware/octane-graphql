@@ -12,15 +12,6 @@ module('Integration | Component | threejs', function(hooks) {
 
     await render(hbs`<Threejs />`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <Threejs>
-        template block text
-      </Threejs>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.ok(this.element);
   });
 });
