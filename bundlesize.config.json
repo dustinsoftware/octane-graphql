@@ -5,8 +5,16 @@
       "maxSize": "10 kB"
     },
     {
+      "path": "./dist/assets/my-app*.css",
+      "maxSize": "100 kB"
+    },
+    {
       "path": "./dist/assets/vendor*.js",
       "maxSize": "200 kB"
+    },
+    {
+      "path": "./dist/assets/vendor*.css",
+      "maxSize": "100 kB"
     }
   ]
 }
