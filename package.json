@@ -15,8 +15,9 @@
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
-    "test": "ember test",
-    "audit": "lighthouse http://localhost:4200 --output-path=/app/public/lighthouse-results.html --chrome-flags=\"--headless --no-sandbox\""
+    "test": "yarn lint:bundlesize && ember test",
+    "audit": "lighthouse http://localhost:4200 --output-path=/app/public/lighthouse-results.html --chrome-flags=\"--headless --no-sandbox\"",
+    "lint:bundlesize": "ember build --prod && bundlesize"
   },
   "devDependencies": {
     "@ember/edition-utils": "^1.1.1",
@@ -24,6 +25,7 @@
     "@glimmer/component": "^0.14.0-alpha.12",
     "babel-eslint": "^10.0.2",
     "broccoli-asset-rev": "^3.0.0",
+    "bundlesize": "^0.18.0",
     "ember-auto-import": "^1.2.20",
     "ember-cli": "3.14.0-beta.2",
     "ember-cli-app-version": "^3.2.0",
