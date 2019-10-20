@@ -1,34 +1,4 @@
-FROM node:10 AS node-build
-
-RUN apt-get update && apt-get install -y htop lsyncd nano supervisor
-
-RUN mkdir -p /var/log/supervisor
-
-# Chrome install steps taken from https://hub.docker.com/r/browserless/chrome/dockerfile
-RUN apt-get install -y \
-  fonts-liberation \
-  fontconfig \
-  libappindicator3-1 \
-  libasound2 \
-  libatk1.0-0 \
-  libgtk-3-0 \
-  libnspr4 \
-  libx11-6 \
-  libx11-xcb1 \
-  libxss1 \
-  libxtst6 \
-  libnss3 \
-  lsb-release \
-  xdg-utils \
-  wget \
-  xvfb \
-  curl &&\
-  # Fonts
-  fc-cache -f -v
-
-RUN cd /tmp &&\
-  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&\
-  dpkg -i google-chrome-stable_current_amd64.deb && rm -rf /tmp/*
+FROM dustinsoftware/node10-chrome AS node-build
 
 RUN mkdir -p /app/dist
 
