@@ -16,7 +16,10 @@ module.exports = function(defaults) {
     },
     babel: {
       plugins: [ require.resolve('ember-auto-import/babel-plugin') ]
-    }
+    },
+    cssModules: {
+      includeExtensionInModulePath: true,
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated

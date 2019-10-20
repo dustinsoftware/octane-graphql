@@ -1,4 +1,5 @@
 import Component from '@ember/component';
+import styles from './grid-demo-styles';
 
 export default class GridDemoComponent extends Component {
   didInsertElement() {
@@ -6,6 +7,8 @@ export default class GridDemoComponent extends Component {
       this.initializeGrid(grid);
     });
   }
+
+  styles = styles;
 
   initializeGrid(grid) {
     if (this.isDestroying) {
