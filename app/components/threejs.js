@@ -17,6 +17,9 @@ export default class ThreeJsComponent extends Component {
   }
 
   initThreeJsScene(THREE) {
+    if (this.isDestroying) {
+      return;
+    }
     this.camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 10);
     this.camera.position.z = 1;
 
@@ -31,9 +34,7 @@ export default class ThreeJsComponent extends Component {
     this.set('threeRenderer', new THREE.WebGLRenderer({ antialias: true }));
     this.threeRenderer.setSize(window.innerWidth, window.innerHeight);
 
-    if (!this.isDestroying) {
-      this.element.querySelector('.three-container').appendChild(this.threeRenderer.domElement);
-    }
+    this.element.querySelector('.three-container').appendChild(this.threeRenderer.domElement);
   }
 
   animate = () => {
