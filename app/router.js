@@ -9,4 +9,5 @@ export default class Router extends EmberRouter {
 Router.map(function() {
   this.route('threejs');
   this.route('not-found', { path: '/*path' });
+  this.route('grid-demo');
 });
