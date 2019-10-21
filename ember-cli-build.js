@@ -20,6 +20,11 @@ module.exports = function (defaults) {
     cssModules: {
       includeExtensionInModulePath: true,
     },
+    prember: {
+      urls: [
+        '/',
+      ]
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
