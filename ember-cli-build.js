@@ -2,7 +2,7 @@
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     'asset-cache': {
       include: [
@@ -11,11 +11,11 @@ module.exports = function(defaults) {
     },
     'esw-cache-fallback': {
       patterns: [
-        '/lighthouse-results\\.html'
+        '/lighthouse-results\\.*'
       ],
     },
     babel: {
-      plugins: [ require.resolve('ember-auto-import/babel-plugin') ]
+      plugins: [require.resolve('ember-auto-import/babel-plugin')]
     },
     cssModules: {
       includeExtensionInModulePath: true,
