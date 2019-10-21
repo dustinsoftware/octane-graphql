@@ -10,8 +10,6 @@ RUN yarn global add ember-cli@3.13.1 lighthouse
 
 RUN PATH=$PATH:"$(yarn global bin)"
 
-RUN apt-get install -y vim
-
 USER user
 
 WORKDIR /app
