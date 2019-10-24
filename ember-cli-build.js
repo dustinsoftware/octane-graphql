@@ -5,9 +5,7 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     'asset-cache': {
-      include: [
-        'ag-grid.css'
-      ],
+      include: ['assets/**/*', 'ag-grid.css'],
     },
     'esw-cache-fallback': {
       patterns: [
