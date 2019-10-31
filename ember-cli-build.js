@@ -6,6 +6,9 @@ module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     'asset-cache': {
       include: ['assets/**/*', 'ag-grid.css'],
+      manual: [
+        'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css'
+      ]
     },
     'esw-cache-fallback': {
       patterns: [
