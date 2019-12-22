@@ -1267,11 +1267,6 @@ after@0.8.2:
   resolved "https://registry.yarnpkg.com/after/-/after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f"
   integrity sha1-/ts5T58OAqqXaOcCvaI7UF+ufh8=
 
-ag-grid-community@^21.2.2:
-  version "21.2.2"
-  resolved "https://registry.yarnpkg.com/ag-grid-community/-/ag-grid-community-21.2.2.tgz#a5696a303fa04d03d26e4c9e09e114d308ff4ad4"
-  integrity sha512-x8kQmynYM/7zoigs7wIe7DkK1TIlUP5N1TYrGPsK8vO2gN+rqOok9csGPy4YamggWTcSxpy7wji/Kcz/gUp8/w==
-
 ajv-errors@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/ajv-errors/-/ajv-errors-1.0.1.tgz#f35986aceb91afadec4102fbd85014950cefa64d"
@@ -10718,11 +10713,6 @@ third-party-web@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/third-party-web/-/third-party-web-0.11.0.tgz#4e80dac50c26557add464742306bc392ab845352"
   integrity sha512-R9/WoBZc0Db7qLNQ9QzMSP0YMEU/LF5X8LJqOYvDd/cDFwSc/D1YszYbyFFRzt6McDP6PO425ZBmHQZWYFDZDg==
-
-three@^0.111.0:
-  version "0.111.0"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.111.0.tgz#9cedb73e79b7f6bf2440cb67a273f883faa923b6"
-  integrity sha512-AcTqyGJ3H75AIusOuADy0LsP958QKQwm/YhABHFMzd6RFXPNVay1rlSbbG6WYv7KM72G2THMMwqbjQd4dVHMkQ==
 
 through2@^2.0.0:
   version "2.0.5"

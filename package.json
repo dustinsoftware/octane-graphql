@@ -27,7 +27,6 @@
     "@ember/render-modifiers": "^1.0.2",
     "@glimmer/component": "^1.0.0",
     "@glimmer/tracking": "^1.0.0",
-    "ag-grid-community": "^21.2.2",
     "babel-eslint": "^10.0.3",
     "broccoli-asset-rev": "^3.0.0",
     "bundlesize": "^0.18.0",
@@ -66,7 +65,6 @@
     "prember-middleware": "^0.1.0",
     "qunit-dom": "^0.9.2",
     "start-server-and-test": "^1.10.6",
-    "three": "^0.111.0",
     "urql": "^1.7.0",
     "wonka": "^3.2.2"
   },

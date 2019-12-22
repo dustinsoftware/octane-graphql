@@ -12,15 +12,6 @@ module('Integration | Component | graphql-demo', function(hooks) {
 
     await render(hbs`<GraphqlDemo />`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <GraphqlDemo>
-        template block text
-      </GraphqlDemo>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.ok(this.element);
   });
 });
